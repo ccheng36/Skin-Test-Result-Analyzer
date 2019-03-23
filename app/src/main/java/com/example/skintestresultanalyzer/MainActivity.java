@@ -2,9 +2,13 @@ package com.example.skintestresultanalyzer;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
+
+    Button SignInBtn, SignUpBtn;
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -17,8 +21,25 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+//        TextView tv = (TextView) findViewById(R.id.sample_text);
+//        tv.setText(stringFromJNI());
+
+        SignInBtn = (Button) findViewById(R.id.SignInBtn);
+        SignUpBtn = (Button) findViewById(R.id.SignUpBtn);
+
+        SignInBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        SignUpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
     }
 
     /**
