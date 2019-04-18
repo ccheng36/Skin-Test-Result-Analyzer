@@ -19,7 +19,7 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class SignUp extends AppCompatActivity {
 
-    MaterialEditText email, name, password;
+    MaterialEditText name, email, password;
     Button signUpBtn;
 
     @Override
@@ -27,10 +27,11 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        email = (MaterialEditText) findViewById(R.id.email);
-        password = (MaterialEditText) findViewById(R.id.password);
+        name = findViewById(R.id.name);
+        email = findViewById(R.id.email);
+        password = findViewById(R.id.password);
 
-        signUpBtn = (Button) findViewById(R.id.SignUpBtn);
+        signUpBtn = findViewById(R.id.SignUpBtn);
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference table_ucsfstra = database.getReference("ucsf-stra");

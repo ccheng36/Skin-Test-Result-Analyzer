@@ -65,14 +65,14 @@
         android:textColor="@android:color/white"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        app:fButtonColor="@color/btnSignIn"
+        android:layout_alignParentBottom="true"
+        app:buttonColor="@color/SignUpBtn"
         app:shadowColor="@android:color/black"
         app:shadowEnabled="true"
-        app:shadowHeight="5dp"
-        app:cornerRadius="4dp"/>
+        app:shadowHeight="3dp"
+        app:cornerRadius="4dp" />
 
 </RelativeLayout>
