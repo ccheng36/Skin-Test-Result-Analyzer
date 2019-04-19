@@ -29,7 +29,7 @@ public class SignIn extends AppCompatActivity {
 
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        SignInBtn = findViewById(R.id.SignUpBtn);
+        SignInBtn = findViewById(R.id.SignInBtn);
 
         // initialize firebase
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
