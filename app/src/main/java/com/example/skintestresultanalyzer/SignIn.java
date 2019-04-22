@@ -1,6 +1,7 @@
 package com.example.skintestresultanalyzer;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.skintestresultanalyzer.Model.User;
+import com.google.android.gms.common.internal.service.Common;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -53,6 +55,9 @@ public class SignIn extends AppCompatActivity {
 
                             if (user.getPassword().equals(password.getText().toString())) {
                                 Toast.makeText(SignIn.this, "Sign in successfully!", Toast.LENGTH_SHORT).show();
+                                Intent welcome = new Intent(SignIn.this, welcome.class);
+                                startActivity(welcome);
+                                finish();
                             } else {
                                 Toast.makeText(SignIn.this, "Sign in fail", Toast.LENGTH_SHORT).show();
                             }
