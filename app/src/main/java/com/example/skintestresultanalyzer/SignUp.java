@@ -46,13 +46,14 @@ public class SignUp extends AppCompatActivity {
                 table_ucsfstra.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.child(email.getText().toString()).exists()) {
+                        String modifiedEmail = email.getText().toString().replace(".", " ");
+                        if (dataSnapshot.child(modifiedEmail).exists()) {
                             mDialog.dismiss();
                             Toast.makeText(SignUp.this, "Email already register", Toast.LENGTH_SHORT).show();
                         } else {
                             mDialog.dismiss();
                             User user = new User(name.getText().toString(), email.getText().toString(), password.getText().toString());
-                            table_ucsfstra.child(email.getText().toString()).setValue(user);
+                            table_ucsfstra.child(modifiedEmail).setValue(user);
                             Toast.makeText(SignUp.this, "Sign up successfully!", Toast.LENGTH_SHORT).show();
                             finish();
                         }

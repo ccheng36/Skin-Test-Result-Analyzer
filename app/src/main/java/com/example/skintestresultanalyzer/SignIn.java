@@ -48,10 +48,11 @@ public class SignIn extends AppCompatActivity {
 
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.child(email.getText().toString()).exists()) {
+                        String modified_email = email.getText().toString().replace(".", " ");
+                        if (dataSnapshot.child(modified_email).exists()) {
                             mDialog.dismiss();
 
-                            User user = dataSnapshot.child(email.getText().toString()).getValue(User.class);
+                            User user = dataSnapshot.child(modified_email).getValue(User.class);
 
                             if (user.getPassword().equals(password.getText().toString())) {
                                 Toast.makeText(SignIn.this, "Sign in successfully!", Toast.LENGTH_SHORT).show();
