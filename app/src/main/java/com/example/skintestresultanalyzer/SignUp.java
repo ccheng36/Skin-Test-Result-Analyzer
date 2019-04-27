@@ -1,7 +1,6 @@
 package com.example.skintestresultanalyzer;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +10,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.skintestresultanalyzer.Model.User;
-import com.google.android.gms.common.internal.service.Common;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,51 +17,45 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
-public class SignIn extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 
-    EditText email, password;
-    Button SignInBtn;
+    MaterialEditText name, email, password;
+    Button signUpBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_sign_up);
 
+        name = findViewById(R.id.name);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        SignInBtn = findViewById(R.id.SignInBtn);
 
-        // initialize firebase
+        signUpBtn = findViewById(R.id.SignUpBtn);
+
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference table_ucsfstra = database.getReference("ucsf-stra");
 
-        SignInBtn.setOnClickListener(new View.OnClickListener() {
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final ProgressDialog mDialog = new ProgressDialog(SignIn.this);
-                mDialog.setMessage("Please wait...");
+                final ProgressDialog mDialog = new ProgressDialog(SignUp.this);
+                mDialog.setMessage("Please Wait...");
                 mDialog.show();
 
                 table_ucsfstra.addValueEventListener(new ValueEventListener() {
-
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String modified_email = email.getText().toString().replace(".", " ");
-                        if (dataSnapshot.child(modified_email).exists()) {
+                        String modifiedEmail = email.getText().toString().replace(".", " ");
+                        if (dataSnapshot.child(modifiedEmail).exists()) {
                             mDialog.dismiss();
-
-                            User user = dataSnapshot.child(modified_email).getValue(User.class);
-
-                            if (user.getPassword().equals(password.getText().toString())) {
-                                Toast.makeText(SignIn.this, "Sign in successfully!", Toast.LENGTH_SHORT).show();
-                                Intent welcome = new Intent(SignIn.this, welcome.class);
-                                startActivity(welcome);
-                                finish();
-                            } else {
-                                Toast.makeText(SignIn.this, "Sign in fail", Toast.LENGTH_SHORT).show();
-                            }
+                            Toast.makeText(SignUp.this, "Email already register", Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(SignIn.this, "User not exist in database", Toast.LENGTH_SHORT).show();
+                            mDialog.dismiss();
+                            User user = new User(name.getText().toString(), email.getText().toString(), password.getText().toString());
+                            table_ucsfstra.child(modifiedEmail).setValue(user);
+                            Toast.makeText(SignUp.this, "Sign up successfully!", Toast.LENGTH_SHORT).show();
+                            finish();
                         }
                     }
 

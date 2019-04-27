@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "963396792989",
+    "firebase_url": "https://ucsf-stra.firebaseio.com",
+    "project_id": "ucsf-stra",
+    "storage_bucket": "ucsf-stra.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963396792989:android:82a4ce41aac9c5cb",
+        "android_client_info": {
+          "package_name": "com.example.skintestresultanalyzer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963396792989-12tfaar8vp9bhv56vip05ib6m5760d06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.skintestresultanalyzer",
+            "certificate_hash": "6f6e2e173f86961757f9d7ac8eac6aafb359aec8"
+          }
+        },
+        {
+          "client_id": "963396792989-com0ooeo93eqmhmgk8pds5ermkatvk5k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBD6bBuO0zkPV1_TI_XeLgVeCToBoc25Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963396792989-com0ooeo93eqmhmgk8pds5ermkatvk5k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

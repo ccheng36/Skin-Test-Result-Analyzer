@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Skin Test Result Analyzer</string>
+    <string name="singIn">Sign In</string>
+    <string name="signUp">Sign Up</string>
+    <string name="emailAddress">Emil Address</string>
+    <string name="password">Password</string>
+    <string name="name">Username</string>
+    <string name="takepicture">Take Picture</string>
 </resources>
