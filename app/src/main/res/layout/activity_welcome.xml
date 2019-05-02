@@ -14,6 +14,12 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_marginHorizontal="100dp"
+            android:layout_marginVertical="175dp"
+            android:layout_width="200dp"
+            android:layout_height="250dp" />
     </LinearLayout>
     <info.hoang8f.widget.FButton
         android:id="@+id/cameraBtn"
@@ -30,25 +36,5 @@
         app:shadowEnabled="true"
         app:shadowHeight="3dp"
         app:cornerRadius="4dp" />
-
-    <info.hoang8f.widget.FButton
-        android:id="@+id/contbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="340dp"
-        android:text="@string/nextpage"
-        android:textColor="@android:color/white"
-        app:cornerRadius="4dp"
-        app:fButtonColor="@color/fbutton_color_peter_river"
-        app:shadowColor="@android:color/black"
-        app:shadowEnabled="true"
-        app:shadowHeight="3dp" />
-
 
 </RelativeLayout>
