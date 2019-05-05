@@ -66,6 +66,7 @@ public class welcome extends AppCompatActivity {
                 }
             }
         });
+
         contbtn.setOnClickListener(new View.OnClickListener(){
            @Override
            public void onClick(View view){
