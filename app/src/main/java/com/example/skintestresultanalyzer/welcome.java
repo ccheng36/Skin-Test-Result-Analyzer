@@ -56,7 +56,7 @@ public class welcome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                File SkinTest = null;
+                File SkinTest;
                 SkinTest = cPhotoFile();
                 if(SkinTest != null) {
                     filelocate = SkinTest.getAbsolutePath();
