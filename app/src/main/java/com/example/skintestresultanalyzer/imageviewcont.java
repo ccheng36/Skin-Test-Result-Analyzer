@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -34,6 +35,9 @@ public class imageviewcont extends Activity {
         path = extra.getString("path");
         Bitmap b = BitmapFactory.decodeFile(path);
         Log.d("CREATION", "path is" + path);
+
+        b = rotateImage(b);
+
         imageView.setImageBitmap(b);
 
         nextbtn.setOnClickListener(new View.OnClickListener() {
@@ -45,5 +49,11 @@ public class imageviewcont extends Activity {
             }
         });
 
+    }
+
+    public static Bitmap rotateImage(Bitmap source) {
+        Matrix matrix = new Matrix();
+        matrix.postRotate(90);
+        return Bitmap.createBitmap(source, 0, 0, source.getWidth(), source.getHeight(), matrix, true);
     }
 }
