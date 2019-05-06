@@ -8,4 +8,6 @@
     <string name="takepicture">Take Picture</string>
     <string name="nextpage">nextpage</string>
     <string name="conti">continue</string>
+    <string name="welcome">Welcome!</string>
+    <string name="instruction">Please place a coin on your arm, while taking the picture.</string>
 </resources>
