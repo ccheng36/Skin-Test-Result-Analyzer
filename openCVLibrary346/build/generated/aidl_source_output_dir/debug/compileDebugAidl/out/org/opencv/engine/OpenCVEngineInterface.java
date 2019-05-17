@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: C:\\Users\\scao22\\Desktop\\SkinTestResultAnalyzer\\openCVLibrary346\\src\\main\\aidl\\org\\opencv\\engine\\OpenCVEngineInterface.aidl
+ * Original file: D:\\Users\\Shund\\AndroidStudioProjects\\SkinTestResultAnalyzer\\openCVLibrary346\\src\\main\\aidl\\org\\opencv\\engine\\OpenCVEngineInterface.aidl
  */
 package org.opencv.engine;
 /**
