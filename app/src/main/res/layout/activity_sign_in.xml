@@ -26,7 +26,7 @@
         android:inputType="textEmailAddress"
         app:met_baseColor="@android:color/black"
         app:met_floatingLabel="highlight"
-        app:met_maxCharacters="20"
+        app:met_maxCharacters="30"
         app:met_primaryColor="@android:color/black"
         app:met_singleLineEllipsis="true"
         />
@@ -42,7 +42,7 @@
         android:inputType="textPassword"
         app:met_baseColor="@android:color/black"
         app:met_floatingLabel="highlight"
-        app:met_maxCharacters="20"
+        app:met_maxCharacters="30"
         app:met_primaryColor="@android:color/black"
         app:met_singleLineEllipsis="true"
         />

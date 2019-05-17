@@ -12,8 +12,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:theme="@style/Theme.AppCompat">
         <activity android:name=".welcome"></activity>
+        <activity android:name=".imageviewcont"></activity>
+        <activity android:name=".imageprocess"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
